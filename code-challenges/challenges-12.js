@@ -74,21 +74,19 @@ const oddFiltration = (arr) => {
 
 const cvsFiltration = (arr) => {
 
-    // let result = arr.filter(seniorJs);
-    // function seniorJs(candidate){
-    //     //// let devObj = {};
-    //     console.log (candidate.yearsOfExperience > 4 && candidate.tech === "JS");
-    //     ////  ? (devObj.fullName = `${candidate.firstName} ${candidate.LastName}`, devObj.tech = candidate.tech) : null;
-    //     //// return(devObj);
-    // }
+    let result = arr.filter(seniorJs);
+
+    function seniorJs(candidate){
+       return candidate.yearsOfExperience > 4 && candidate.tech === "JS";
+    }
     
-    // result.forEach(element => {
-    //     let candObj = {};
-    //     candObj.fullName = `${element.firstName} ${element.LastName}`
-    //     candObj.tech = element.tech;
-    //     result.splice(element, 1, candObj);
-    // });
-    //// return result;
+    result.forEach((element, index) => {
+        let candObj = {};
+        candObj.fullName = `${element.firstName} ${element.LastName}`
+        candObj.tech = element.tech;
+        result.splice(index, 1, candObj);
+    });
+    return result;
     //// write your code here
 }
 // -------------------------------------------------------------------------------------------------------
@@ -104,6 +102,20 @@ const cvsFiltration = (arr) => {
 // 
 
 const vowelsFiltration = (arr) => {
+    let vowels = ["a", "e", "i", "o", "u"];
+    let result = arr.filter(element => {
+        let containTest = true;
+        elementLoop : for (let t = 0; t < element.length; t++) {
+            for (let i = 0; i < vowels.length; i++) {
+                if (element[t] === vowels[i]){
+                    containTest =false;
+                    break elementLoop;
+                };
+            }
+        }
+        return containTest;
+    })
+    return result;
     // write your code here
 } 
 // -------------------------------------------------------------------------------------------------------
@@ -126,7 +138,11 @@ const vowelsFiltration = (arr) => {
 // - the 'include' method can help you, read about it.
 
 const skillComparison = (arr1, arr2) => {
-    // write your code here
+    let result1 = arr1.filter(element => !(arr2.includes(element)));
+    let result2 = arr2.filter(element => !(arr1.includes(element)));
+    let result = result1.concat(result2);
+    return result;
+    // write your code here;
 }
 // -------------------------------------------------------------------------------------------------------
 
