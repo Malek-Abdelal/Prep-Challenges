@@ -45,12 +45,12 @@ return infoArray;
 // as in the example
 
 // Input:
-// let recipeInfo = {
-//   name: "pizza",
-//   ingredients: ["bread", "tomato", "chicken", "mayo"],
-//   cookTime: "twoHours",
-//   price: "25$",
-// };
+  // let recipeInfo = {
+  //   name: "pizza",
+  //   ingredients: ["bread", "tomato", "chicken", "mayo"],
+  //   cookTime: "twoHours",
+  //   price: "25$",
+  // };
 //
 // Output:
 // ["name: pizza", "ingredients: bread,tomato,chicken,mayo", "cookTime: twoHours", "price: 25$"]
@@ -59,6 +59,12 @@ return infoArray;
 // You can solve this challenge by using Object.entries
 
 const getEntries = (obj) => {
+
+  let array = [];
+  for(let [key, value] of Object.entries(obj)){
+    array.push(`${key}: ${value}`);
+  }
+  return array;
   // write your code here
 };
 // -------------------------------------------------------------------------------------------------------
@@ -101,6 +107,13 @@ const courses = [
 const getInfo = (arr) => {
   let coursesName = [];
   let studentsName = [];
+
+  for(let i of arr){
+    coursesName.push(i.course);
+    for( let x of i.Students){
+      studentsName.push(x);
+    }
+  }
   // write your code here
 
   return { coursesName, studentsName };
@@ -125,6 +138,8 @@ const getInfo = (arr) => {
 // ]
 
 const getStudents = (arr) => {
+  let info = {};
+  
   // write your code here
 };
 //  ------------------------------------------------------------------------------------------------------
