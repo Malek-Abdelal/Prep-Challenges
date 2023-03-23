@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "function birthdayCakeCandles(candles) {\n    let tallest = 0;\n    let count = 0;\n    for(let i = 0; i < candles.length; i++){\n        (candles[i] > tallest) ? tallest = candles[i] : null;\n    }\n    for (const i of candles) {\n        (i === tallest) ? count += 1 : null;\n    } \n    return count;\n    // Write your code here\n}"
+                "function birthdayCakeCandles(candles) {\n    let tallest = 0;\n    let count = 0;\n    for(let i = 0; i < candles.length; i++){\n        (candles[i] > tallest) ? tallest = candles[i] : null;\n    }\n    for (const i of candles) {\n        (i === tallest) ? count += 1 : null;\n    } \n    return count;\n}"
             ],
             "outputs": []
         },
@@ -59,7 +59,7 @@
         {
             "language": "javascript",
             "source": [
-                "function migratoryBirds(arr) {\n    let count = {};\n    let top = 0;\n    let result = null;\n    for (let i in arr){\n       (count[arr[i]] === undefined) ? count[arr[i]] = 1 : count[arr[i]] += 1 ;\n    }\n    for(let i of Object.values(count)){\n        (i > top) ? top = i : null;\n    }\n    for (let [key, value] of Object.entries(count)){\n        (value === top && result === null) ? result = parseInt(key) :(value === top && result !== null) ? parseInt(key) <= result ? result = parseInt(key) :null :null ;\n    }\n    return result;\n            // Write your code here\n}"
+                "function migratoryBirds(arr) {\n    let count = {};\n    let top = 0;\n    let result = null;\n    for (let i in arr){\n       (count[arr[i]] === undefined) ? count[arr[i]] = 1 : count[arr[i]] += 1 ;\n    }\n    for(let i of Object.values(count)){\n        (i > top) ? top = i : null;\n    }\n    for (let [key, value] of Object.entries(count)){\n        (value === top && result === null) ? result = parseInt(key) :(value === top && result !== null) ? parseInt(key) <= result ? result = parseInt(key) :null :null ;\n    }\n    return result;\n}"
             ],
             "outputs": []
         }
