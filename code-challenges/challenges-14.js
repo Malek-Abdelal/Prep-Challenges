@@ -40,7 +40,7 @@ const LastWord = (str) => {
 
 const LastWord_2 = (str) => {
     return str.split(" ").pop();
-        // write your code here
+    // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 
