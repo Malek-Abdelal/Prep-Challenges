@@ -15,7 +15,16 @@
 //
 
 const wordLength = (str) => {
-    // write your code here
+    let array = [];
+    let midLen = 0;
+    let length = 0;
+    array = str.split(" ");
+    length = (array.length - 1) / 2;
+    if (length % 2 != 0) {
+        length = ((array.length) / 2)
+    }
+    midLen = array[length].length;
+    return midLen;
 }
 // -------------------------------------------------------------------------------------------------------
 
