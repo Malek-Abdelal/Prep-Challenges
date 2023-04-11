@@ -93,6 +93,17 @@ const wordLetters = (str1, str2) => {
 //
 
 const targetIndex = (arr, int) => {
+        let index = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (int == arr[i]) {
+                index = i
+            } else if ((int != arr[i]) && (int == 2 || int == 4)) {
+                index = (int - 1)
+            } else if (int > 6) {
+                index = (int - (3))
+            }
+        }
+        return index;
     // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
