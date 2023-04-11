@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "function appendAndDelete(s, t, k) {\n    let arr1 = s.split(\"\")\n    let arr2 = t.split(\"\")\n    let count = 0\n    for (let i = 0; i === count && i < s.length; i++) {\n        if (arr1[i] === arr2[i]) {\n            count++\n        }\n    }\n\n    let tMinusCount = t.length - count\n    let sMinusCount = s.length - count\n\n    let STK = k - (tMinusCount + sMinusCount)\n\n    if (tMinusCount + sMinusCount < k && t.length + s.length > k && STK % 2 !== 0) {\n        return \"No\"\n    } else if (tMinusCount + sMinusCount <= k) {\n        return \"Yes\"\n    } else {\n        return \"No\"\n    }\n}\n"
+                "function appendAndDelete(s, t, k) {\n    let arr1 = s.split(\"\")\n    let arr2 = t.split(\"\")\n    let count = 0\n    for (let i = 0; i === count && i < s.length; i++) {\n        if (arr1[i] === arr2[i]) {\n            count++\n        }\n    }\n\n    let tMinusCount = t.length - count\n    let sMinusCount = s.length - count\n\n    let STK = k - (tMinusCount + sMinusCount)\n\n    if (tMinusCount + sMinusCount < k && t.length + s.length > k && STK % 2 !== 0) {\n        return \"No\"\n    } else if (tMinusCount + sMinusCount <= k) {\n        return \"Yes\"\n    } else {\n        return \"No\"\n    }\n    \n}\n"
             ],
             "outputs": []
         },
